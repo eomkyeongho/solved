@@ -4,7 +4,6 @@ import time
 
 headers = {"User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"}
 url = "https://solved.ac/profile/"
-ids = {"rudgh9242", "ttochi0105", "cil6092", "citrus_unshiu", "seojh0330", "qwcol032", "kjo980822", "susudjdi"}
 
 def getRating(id):
     req_url = url + id
@@ -17,6 +16,10 @@ def getRating(id):
     rating = rating.replace(',', '')
     rating = rating.replace('\"','')
     rating = rating.replace('r','')
-    return rating
+
+    if rating is '':
+        return -1
+    else:
+        return int(rating)
 
 

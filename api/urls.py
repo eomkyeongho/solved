@@ -4,5 +4,5 @@ from . import views
 
 app_name = 'solvedapp'
 urlpatterns = [
-    path('test/', views.ApiTodoLV.as_view(), name='test'),
+    path('test/', views.ApiUserListLV.as_view(), name='test'),
 ]

@@ -2,11 +2,10 @@ from django.http import JsonResponse
 from django.views.generic import ListView
 from django.shortcuts import render
 from api.models import User
-
-idList = ['rudgh9242','citrus_unshiu','seojh0330','qwcol032']
+from api.updatemodel import idList
 
 # Create your views here.
-class ApiTodoLV(ListView):
+class ApiUserListLV(ListView):
     model = User
     def get(self, request, *args, **kwargs):
         userList = []
